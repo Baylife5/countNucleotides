@@ -1,0 +1,17 @@
+class countNucleotides(str):
+    
+    def length (self):
+        return (len(self))
+
+    def getCount (self):
+        num_A = self.count("A")
+        num_C = self.count("C")
+        num_G = self.count("G")
+        num_T = self.count("T")
+        return num_A, num_C, num_G, num_T
+
+dna = input("Enter a dna sequence: ")
+upperDNA = dna.upper()
+A,C,G,T = countNucleotides.getCount(upperDNA)
+
+print ("Number As =", A, "Number Cs =", C, "Number Gs =", G, "Number Ts =", T)
