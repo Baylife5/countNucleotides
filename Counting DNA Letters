@@ -21,3 +21,37 @@ upperDNA = dna.upper()
 data = countNucleotides(upperDNA)
 data.dnaOutput()
 
+
+############### Variation ##############
+
+class countNucleotides(str): 
+                    
+    def length (self):     # This method is determining the length of the DNA sequence.    
+        return(len(self))  
+    
+    def getA (self):       # This method is counting the number of As in the sequence. 
+        num_A = self.count("A") 
+        return(num_A)
+    
+    def getT (self):       # This method is counting the number of Ts in the sequence. 
+        num_T = self.count("T")
+        return(num_T)
+    
+    def getC (self):       # This method is counting the number of Cs in the sequence.
+        num_C = self.count("C")
+        return(num_C)
+    
+    def getG (self):       # This method is counting the number of Gs in the sequence. 
+        num_G = self.count("G")
+        return(num_G)
+
+    def dnaOutput (self):  # This method is used to display the outputs. 
+        print ("Your sequence is {0} nucleotides long with the following breakdown of bases:".format(self.length()))
+        print ("number As = {0} number Cs = {1} number Gs = {2} number Ts = {3}".format(self.getA(),self.getT(),self.getC(),self.getG()))
+
+        
+dna = input("Enter a dna sequence: ")  # This is prompting the user. 
+upperDNA = dna.upper()
+coolString = countNucleotides(upperDNA)
+coolString.dnaOutput()
+    
