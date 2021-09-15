@@ -9,9 +9,15 @@ class countNucleotides(str):
         num_G = self.count("G")
         num_T = self.count("T")
         return num_A, num_C, num_G, num_T
+    
+    def dnaOutput (self):  # This method is used to display the outputs. 
+          a,c,g,t = self.getCount()
+          print ("Your sequence is {0} nucleotides long with the following breakdown of bases:".format(self.length()))
+          print ("Number As =", a, "Number Cs =", c, "Number Gs =", g, "Number Ts =", t)
+
 
 dna = input("Enter a dna sequence: ")
 upperDNA = dna.upper()
-A,C,G,T = countNucleotides.getCount(upperDNA)
+data = countNucleotides(upperDNA)
+data.dnaOutput()
 
-print ("Number As =", A, "Number Cs =", C, "Number Gs =", G, "Number Ts =", T)
